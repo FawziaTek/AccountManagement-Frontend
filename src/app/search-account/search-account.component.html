@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="card col-md-6 offset-3 mt-2">
+    <div class="card">
+      <div class="card-header">Accounts</div>
+      <div class="card-body">
+        <form [formGroup]="accountFormGroup" (ngSubmit)="handleSearchAccount()">
+          <div class="input-group">
+            <label class="input-group-text">Account Id :</label>
+            <input type="text" formControlName="accountId" class="form-control">
+            <button class="btn btn-info">
+              <i class="bi bi-search"></i>
+              Search
+            </button>
+          </div>
+        </form>
+        <ng-template #errorTemplate>
+          <ng-container *ngIf="errorMessage ; else loading">
+            <div class="text-danger">{{errorMessage}}</div>
+          </ng-container>
+          <ng-template #loading>
+            Loading ...
+          </ng-template>
+        </ng-template>
+        <ng-container *ngIf="accountObservable | async as account">
+<span></span>
+          <div class="mb-2">
+            <label>Balance :  </label>
+            <label><strong>{{account.balance | number : '1.2-2'}}</strong></label>
+          </div>
+          <div class="mb-2">
+            <label>Customer Name :  </label>
+            <label><strong>{{account.name}}</strong></label>
+          </div>
+          <div class="mb-2">
+            <label>Customer Surname :  </label>
+            <label><strong>{{account.surname }}</strong></label>
+          </div>
+          <hr>
+
+          <table class="table">
+            <thead>
+            <th>ID</th><th>Date</th><th>Amount</th>
+            </thead>
+
+            <tbody>
+            <tr *ngFor="let t of account.transactionDTOS">
+              <td>{{t.transaction_id}}</td>
+              <td>{{t.transactionDate | date }}</td>
+              <td >{{t.amount | number : '1.2-2'}}</td>
+            </tr>
+            </tbody>
+          </table>
+
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+

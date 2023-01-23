@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="card col-md-6 offset-3 mt-2">
+    <div class="card-header">New Account</div>
+    <div class="card-body">
+      <form [formGroup]="newAccountFormGroup" (ngSubmit)="handleSaveAccount()">
+        <div class="mb-3">
+          <label class="form-label">Customer Id:</label>
+          <input type="text" formControlName="customer_Id" class="form-control">
+          <span class="text-danger"
+                *ngIf="newAccountFormGroup.controls['customer_Id'].touched
+                && newAccountFormGroup.controls['customer_Id'].errors
+                && newAccountFormGroup.controls['customer_Id'].errors!['required']">
+            customerId is Required
+          </span>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Initial Creadit:</label>
+          <input type="text" formControlName="initialCredit" class="form-control">
+          <span class="text-danger"
+                *ngIf="newAccountFormGroup.controls['initialCredit'].touched
+                && newAccountFormGroup.controls['initialCredit'].errors
+                && newAccountFormGroup.controls['initialCredit'].errors!['required']">
+            initialCredit is not valid
+          </span>
+        </div>
+        <button [disabled]="!newAccountFormGroup.valid" class="btn btn-info">Save</button>
+      </form>
+    </div>
+  </div>
+</div>
