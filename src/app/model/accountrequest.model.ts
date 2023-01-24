@@ -1,6 +1,6 @@
 
 export interface AccountRequest {
-  customer_Id: number;
+  customerId: number;
   initialCredit: number;
 
 }

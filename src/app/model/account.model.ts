@@ -2,7 +2,7 @@ import {Transaction} from "./transaction.model";
 import {Customer} from "./customer.model";
 
 export interface Account {
-  account_id: number;
+  accountId: number;
   balance: number;
   creationDate: Date;
   customerDTO: Customer;

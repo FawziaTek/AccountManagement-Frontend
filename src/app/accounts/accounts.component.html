@@ -27,10 +27,10 @@
           </thead>
           <tbody>
           <tr *ngFor="let a of accounts | async">
-            <td>{{a.account_id}}</td>
+            <td>{{a.accountId}}</td>
             <td>{{a.balance  | number : '1.2-2'}}</td>
             <td>{{a.creationDate}}</td>
-            <td>{{a.customerDTO.customer_id}}</td>
+            <td>{{a.customerDTO.customerId}}</td>
 
 
           </tr>

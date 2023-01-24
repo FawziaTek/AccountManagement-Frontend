@@ -5,11 +5,11 @@
       <form [formGroup]="newAccountFormGroup" (ngSubmit)="handleSaveAccount()">
         <div class="mb-3">
           <label class="form-label">Customer Id:</label>
-          <input type="text" formControlName="customer_Id" class="form-control">
+          <input type="text" formControlName="customerId" class="form-control">
           <span class="text-danger"
-                *ngIf="newAccountFormGroup.controls['customer_Id'].touched
-                && newAccountFormGroup.controls['customer_Id'].errors
-                && newAccountFormGroup.controls['customer_Id'].errors!['required']">
+                *ngIf="newAccountFormGroup.controls['customerId'].touched
+                && newAccountFormGroup.controls['customerId'].errors
+                && newAccountFormGroup.controls['customerId'].errors!['required']">
             customerId is Required
           </span>
         </div>
