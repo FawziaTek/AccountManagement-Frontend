@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { CustomersComponent } from './customers/customers.component';
-import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from "@angular/common/http";
 import { NewAccountComponent } from './new-account/new-account.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { SearchAccountComponent } from './search-account/search-account.component';

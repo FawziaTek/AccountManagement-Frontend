@@ -1,11 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
 import {AccountsService} from "../services/accounts.service";
 import {catchError, Observable, throwError} from "rxjs";
 import {Account} from "../model/account.model";
-import {FormBuilder, FormGroup} from "@angular/forms";
-import {CustomersService} from "../services/customers.service";
-import {Customer} from "../model/customer.model";
 
 @Component({
   selector: 'app-accounts',

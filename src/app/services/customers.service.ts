@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Customer} from "../model/customer.model";
 import {environments} from "../../environments/environments";
-import {AccountRequest} from "../model/accountrequest.model";
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +18,7 @@ export class CustomersService {
 
   public getCustomers():Observable<any>
   {
-    return this.http.get<any>("http://localhost:8382/v1/customer",this.httpOptions);
+    return this.http.get<any>(environments.hostBackend+"/v1/customer",this.httpOptions);
 
   }
 

@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {catchError, Observable, throwError} from "rxjs";
-import {Account} from "../model/account.model";
-import {CustomersService} from "../services/customers.service";
 import {AccountResponse} from "../model/accountresponse.model";
 import {AccountsService} from "../services/accounts.service";
 
@@ -35,9 +33,5 @@ export class SearchAccountComponent implements OnInit {
     );
   }
 
-  handleAccountTransaction() {
-    let accountId :string = this.accountFormGroup.value.accountId;
-    let amount :number =this.transactionFromGroup.value.amount;
 
-  }
 }
