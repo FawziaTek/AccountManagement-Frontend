@@ -44,7 +44,7 @@
 
             <tbody>
             <tr *ngFor="let t of account.transactionDTOS">
-              <td>{{t.transaction_id}}</td>
+              <td>{{t.transactionId}}</td>
               <td>{{t.transactionDate | date }}</td>
               <td >{{t.amount | number : '1.2-2'}}</td>
             </tr>

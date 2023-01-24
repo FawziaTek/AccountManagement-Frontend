@@ -15,7 +15,7 @@ export class NewAccountComponent  implements OnInit {
 
   ngOnInit(): void {
     this.newAccountFormGroup=this.fb.group({
-      customer_Id : this.fb.control(null, [Validators.required]),
+      customerId : this.fb.control(null, [Validators.required]),
       initialCredit : this.fb.control(null,[Validators.required])
     });
   }
